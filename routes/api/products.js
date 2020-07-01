@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 
 // Product Model
-const Product= require('../models/Product')
+const Product= require('../../models/Product')
 
 //@route GET /
 //@desc Get all products

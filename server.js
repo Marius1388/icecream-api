@@ -18,8 +18,8 @@ mongoose.connect(process.env.DATABASEURL, {
         console.log("ERROR", err.message);
 });
 
-app.use('/', require('./routes/orders'));
-app.use("/products",require('./routes/products'));
+app.use('/api/', require('./routes//api/orders'));
+app.use("/api/products",require('./routes/api/products'));
 
 
 

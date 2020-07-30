@@ -46,8 +46,10 @@ mongoose
 		console.log('ERROR', err.message);
 	});
 
-app.use('/api', require('./routes/api/orders'));
 app.use('/api/products', require('./routes/api/products'));
+app.use('/api', require('./routes/api/orders'));
+app.use('/api/users', require('./routes/api/users'));
+app.use('/api/auth', require('./routes/api/auth'));
 
 const port = process.env.PORT || 3000;
 

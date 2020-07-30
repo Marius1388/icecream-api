@@ -46,7 +46,7 @@ mongoose
 		console.log('ERROR', err.message);
 	});
 
-app.use('/api/', require('./routes//api/orders'));
+app.use('/api', require('./routes/api/orders'));
 app.use('/api/products', require('./routes/api/products'));
 
 const port = process.env.PORT || 3000;

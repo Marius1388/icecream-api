@@ -51,7 +51,7 @@ router.post('/api/auth', (req, res) => {
 //@route GET api/auth/user
 //@desc Get user data
 //@acces Private
-router.get('/api/auth/user', auth, (req, res) => {
+router.get('/api/auth/', auth, (req, res) => {
 	User.findById(req.user.id)
 		//next line means I don't want to get the password
 		.select('-password')

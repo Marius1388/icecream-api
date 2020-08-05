@@ -9,10 +9,10 @@ const mongoose = require('mongoose');
 app.use(cors());
 app.use(function (req, res, next) {
 	// Website you wish to allow to connect
-	res.setHeader('Access-Control-Allow-Origin', 'http://localhost:3001');
+	// res.setHeader('Access-Control-Allow-Origin', 'http://localhost:3001');
 	res.setHeader(
 		'Access-Control-Allow-Origin',
-		'https://github.com/Marius1388/icecream-shop'
+		'https://marius1388.github.io/icecream-shop/'
 	);
 	// res.setHeader('Access-Control-Allow-Origin', '*');
 

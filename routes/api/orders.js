@@ -14,6 +14,15 @@ router.get('/', (req, res) => {
 		.then((orders) => res.json(orders));
 });
 
+//@route GET /:id
+//@desc Get one order by id
+//@acces Public
+router.get('/:id', (req, res) => {
+	Order.findById(req.params.id)
+		//sort by date descendent
+		.then((order) => res.json(order));
+});
+
 //@route POST /
 //@desc Create an order
 //@acces Private(should be)

@@ -10,7 +10,10 @@ app.use(cors());
 app.use(function (req, res, next) {
 	// Website you wish to allow to connect
 	// res.setHeader('Access-Control-Allow-Origin', 'http://localhost:3001');
-	res.setHeader('Access-Control-Allow-Origin', 'https://marius1388.github.io');
+	res.setHeader(
+		'Access-Control-Allow-Origin',
+		'https://marius1388.github.io/icecream-shop'
+	);
 	// res.setHeader('Access-Control-Allow-Origin', '*');
 
 	// Request methods you wish to allow

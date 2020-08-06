@@ -12,7 +12,7 @@ const User = require('../../models/User');
 //@route POST api/auth
 //@desc Authenticate user
 //@acces
-router.post('/api/auth', (req, res) => {
+router.post('/', (req, res) => {
 	const { email, password } = req.body;
 
 	//Simple validation
@@ -51,7 +51,7 @@ router.post('/api/auth', (req, res) => {
 //@route GET api/auth/user
 //@desc Get user data
 //@acces Private
-router.get('/api/auth/', auth, (req, res) => {
+router.get('/user', auth, (req, res) => {
 	User.findById(req.user.id)
 		//next line means I don't want to get the password
 		.select('-password')

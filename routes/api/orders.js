@@ -28,6 +28,7 @@ router.get('/:id', (req, res) => {
 //@acces Private(should be)
 router.post('/', (req, res) => {
 	const newOrder = new Order({
+		userId: req.body.userId,
 		flavour: req.body.flavour,
 		numberOfScoops: req.body.numberOfScoops,
 		pricePerScoop: req.body.pricePerScoop,
@@ -55,6 +56,7 @@ router.put('/:id', (req, res) => {
 	Order.findByIdAndUpdate(
 		req.params.id,
 		{
+			userId: req.body.userId,
 			flavour: req.body.flavour,
 			numberOfScoops: req.body.numberOfScoops,
 			pricePerScoop: req.body.pricePerScoop,

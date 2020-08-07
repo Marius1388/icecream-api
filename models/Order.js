@@ -3,6 +3,10 @@ const Schema = mongoose.Schema;
 
 //create Schema
 const OrderSchema = new Schema({
+	userId: {
+		type: String,
+		required: true,
+	},
 	flavour: {
 		type: String,
 		required: true,
